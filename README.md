@@ -25,3 +25,13 @@ bash ./parser.sh
 1. The script checks for the existence of the 'nginx.log' file before running.
 2. It uses 'awk' to extract the columns (IP, Date, Method, URL, Status) and 'sed' to clean up the excess.
 3. The script automatically runs 'git add', 'git commit' and 'git push' to save the generated 'nginx_report.csv' to your Git repository.
+
+
+# Dockerfile is created to convert log to csv. 
+
+Create docker container:
+docker build -t nginx-parser . 
+
+Run container:
+docker run --rm -v $(pwd):/app nginx-parser
+
