@@ -1,4 +1,4 @@
-# Nginx log parser to .csv
+# Nginx log parser and conversion to csv
 1. A simple bash script that checks for and analyzes the Nginx web server log file access.log.
 2. Converts it to csv format.
 3. Automatically pushes the converted .csv file to a Git repository.
